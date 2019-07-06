@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Games,">
+  <meta name="keywords" content="this,es6,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta name="keywords" content="Games">
+<meta name="description" content="It’s vague to locate where does this point to inside function between arrow function and classic function sometimes. That’s true.  DefinitionArrow Function is the new feature of ECMAScript 6.  () =&amp;gt">
+<meta name="keywords" content="this,es6">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2019/07/06/hello-world/index.html">
+<meta property="og:title" content="Where&#39;s &#39;this&#39; pointing to?">
+<meta property="og:url" content="http://yoursite.com/2019/07/06/THIS-of-Arrow-Function/index.html">
 <meta property="og:site_name" content="Cwy&#39;s Notes">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="It’s vague to locate where does this point to inside function between arrow function and classic function sometimes. That’s true.  DefinitionArrow Function is the new feature of ECMAScript 6.  () =&amp;gt">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-06T04:42:04.777Z">
+<meta property="og:updated_time" content="2019-07-06T09:45:06.777Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="Where&#39;s &#39;this&#39; pointing to?">
+<meta name="twitter:description" content="It’s vague to locate where does this point to inside function between arrow function and classic function sometimes. That’s true.  DefinitionArrow Function is the new feature of ECMAScript 6.  () =&amp;gt">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/07/06/hello-world/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/06/THIS-of-Arrow-Function/">
 
 
 
 
 
-  <title>Hello World | Cwy's Notes</title>
+  <title>Where's 'this' pointing to? | Cwy's Notes</title>
   
 
 
@@ -253,12 +253,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/06/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/06/THIS-of-Arrow-Function/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wenyi Chen">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avtr.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">Where's 'this' pointing to?</h1>
         
 
         <div class="post-meta">
@@ -282,7 +282,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-06T12:29:27+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-06T15:15:37+08:00">
                 2019-07-06
               </time>
             
@@ -305,8 +305,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hello/" itemprop="url" rel="index">
-                    <span itemprop="name">Hello</span>
+                  <a href="/categories/Javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">Javascript</span>
                   </a>
                 </span>
 
@@ -342,19 +342,31 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        <div class="note default"><p>It’s vague to locate where does <strong>this</strong> point to inside function between arrow function and classic function sometimes. That’s true.</p></div>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h1 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h1><p>Arrow Function is the new feature of <strong>ECMAScript 6</strong>. </p>
+<p><code>() =&gt; {}</code></p>
+<h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><p>where does <strong>this</strong> refer to inside a arrow function from code below?<br> <a id="more"></a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function foo() &#123;</span><br><span class="line">    return () =&gt; &#123;</span><br><span class="line">      console.log(this.a)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const obj1 = &#123;a:1&#125;</span><br><span class="line">const obj2 = &#123;a:2&#125;</span><br><span class="line"></span><br><span class="line">const bar = foo.call(obj1)</span><br><span class="line">bar.call(obj2)</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>Which <strong>‘a’</strong> would be print out between obj1 and obj2 ?</p>
+<p>What if we modify the arrow function into classical one? What’s the result then.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function foo() &#123;</span><br><span class="line">    return function()&#123;</span><br><span class="line">      console.log(this.a)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const obj1 = &#123;a:1&#125;</span><br><span class="line">const obj2 = &#123;a:2&#125;</span><br><span class="line"></span><br><span class="line">const bar = foo.call(obj1)</span><br><span class="line">bar.call(obj2)</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h1 id="Answer"><a href="#Answer" class="headerlink" title="Answer"></a>Answer</h1><p>Inside a <strong>arrow function</strong>, foo is bind to obj1 firstly. Therefor, <strong>this</strong> points to obj1. However <strong>arrow function</strong> never changes where <strong>this</strong> refer to. And <strong>this</strong> keep consistent with outer function’s no matter how obj2 binding to arrow function later. Since <strong>this</strong> is bind to arrow function at the definition (lexical scope) not run-time. </p>
+<p><strong>tips：</strong><br>lexical scope also named static scope. Scope would be determined during definition. So <strong>this</strong> would be resolved from inside to outside for arrow function.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var x=1;</span><br><span class="line">var obj=&#123;</span><br><span class="line">  x:2,</span><br><span class="line">  /**</span><br><span class="line">  looking for this. there is no this in obj, so looking outside until global(windows), so this.x =  windows.x </span><br><span class="line">  */</span><br><span class="line">  print: () =&gt; &#123; </span><br><span class="line">    console.log(this.x)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">obj.print();</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var x=1;</span><br><span class="line">var obj=&#123;</span><br><span class="line">  x:2,</span><br><span class="line">  print: function() &#123; // classic function according to &apos;context&apos;</span><br><span class="line">          console.log(this.x)</span><br><span class="line">         &#125;</span><br><span class="line">&#125;</span><br><span class="line">obj.print();</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var a = 1</span><br><span class="line">var obj = &#123;</span><br><span class="line">  a:2,</span><br><span class="line">  b:&#123;</span><br><span class="line">    a:3,</span><br><span class="line">    c: &#123;</span><br><span class="line">      a:4,</span><br><span class="line">      getA: ()=&gt; &#123; // global (windows)</span><br><span class="line">        console.log(this.a)</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">obj.b.c.getA()</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">var a = 1</span><br><span class="line">var obj = &#123;</span><br><span class="line">  a:2,</span><br><span class="line">  b:&#123;</span><br><span class="line">    a:3,</span><br><span class="line">    c: &#123;</span><br><span class="line">      a:4,</span><br><span class="line">      getA: function() &#123; // context -&gt; this = c</span><br><span class="line">                         // looking for this -&gt; c</span><br><span class="line">              return () =&gt; console.log(this.a)</span><br><span class="line">            &#125;</span><br><span class="line">   &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">obj.b.c.getA()()</span><br></pre></td></tr></table></figure>
+
+<p>#Conclusion</p>
+<p>For arrow function, we look for this according to <strong>lexical scope</strong>. For classic function, we do in terms of <strong>context</strong>.</p>
+<p>In short, who invoke classic function, <strong>this</strong> point to who. (run-time)</p>
+<p>For arrow function, looking for <strong>this</strong> from inside to outside, first this is its this scope. (during definition)</p>
 
       
     </div>
@@ -372,7 +384,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Games/" rel="tag"># Games</a>
+            <a href="/tags/this/" rel="tag"># this</a>
+          
+            <a href="/tags/es6/" rel="tag"># es6</a>
           
         </div>
       
@@ -443,6 +457,8 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
+              <img class="site-author-image" itemprop="image" src="/images/avtr.jpg" alt="Wenyi Chen">
+            
               <p class="site-author-name" itemprop="name">Wenyi Chen</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
@@ -465,7 +481,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -476,7 +492,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -509,7 +525,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Definition"><span class="nav-number">1.</span> <span class="nav-text">Definition</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Problem"><span class="nav-number">2.</span> <span class="nav-text">Problem</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Answer"><span class="nav-number">3.</span> <span class="nav-text">Answer</span></a></li></ol></div>
             
 
           </div>
