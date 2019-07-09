@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="this,es6,arrow function,">
+  <meta name="keywords" content="es6,this,arrow function,">
 
 
 
@@ -80,14 +80,14 @@
 
 
 <meta name="description" content="It’s vague to locate where does this point to inside function between arrow function and regular function sometimes. That’s true.  DefinitionArrow Function is the new feature of ECMAScript 6.  () =&amp;gt">
-<meta name="keywords" content="this,es6,arrow function">
+<meta name="keywords" content="es6,this,arrow function">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Where&#39;s &#39;this&#39; pointing to?">
 <meta property="og:url" content="http://yoursite.com/2019/07/06/THIS-of-Arrow-Function/index.html">
 <meta property="og:site_name" content="Cwy&#39;s Notes">
 <meta property="og:description" content="It’s vague to locate where does this point to inside function between arrow function and regular function sometimes. That’s true.  DefinitionArrow Function is the new feature of ECMAScript 6.  () =&amp;gt">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-08T14:34:27.716Z">
+<meta property="og:updated_time" content="2019-07-09T13:02:59.855Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Where&#39;s &#39;this&#39; pointing to?">
 <meta name="twitter:description" content="It’s vague to locate where does this point to inside function between arrow function and regular function sometimes. That’s true.  DefinitionArrow Function is the new feature of ECMAScript 6.  () =&amp;gt">
@@ -342,19 +342,19 @@
       
 
       
-        <div class="note default"><p>It’s vague to locate where does <strong>this</strong> point to inside function between arrow function and regular function sometimes. That’s true.</p></div>
+        <div class="note default"><p>It’s vague to locate where does <code>this</code> point to inside function between arrow function and regular function sometimes. That’s true.</p></div>
 
 <h1 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h1><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions" target="_blank" rel="noopener">Arrow Function</a> is the new feature of <a href="http://es6.ruanyifeng.com/" target="_blank" rel="noopener"><strong>ECMAScript 6</strong></a>. </p>
 <p><code>() =&gt; {}</code></p>
-<h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><p>where does <strong>this</strong> refer to inside a arrow function from code below?<br> <a id="more"></a></p>
+<h1 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h1><p>where does <code>this</code> refer to inside a arrow function from code below?<br> <a id="more"></a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function foo() &#123;</span><br><span class="line">    return () =&gt; &#123;</span><br><span class="line">      console.log(this.a)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const obj1 = &#123;a:1&#125;</span><br><span class="line">const obj2 = &#123;a:2&#125;</span><br><span class="line"></span><br><span class="line">const bar = foo.call(obj1)</span><br><span class="line">bar.call(obj2)</span><br></pre></td></tr></table></figure>
 
-<p>Which <strong>‘a’</strong> would be print out between obj1 and obj2 ?</p>
+<p>Which <code>a</code> would be print out between obj1 and obj2 ?</p>
 <p>What if we modify the arrow function into regular one? What’s the result then.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function foo() &#123;</span><br><span class="line">    return function()&#123;</span><br><span class="line">      console.log(this.a)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const obj1 = &#123;a:1&#125;</span><br><span class="line">const obj2 = &#123;a:2&#125;</span><br><span class="line"></span><br><span class="line">const bar = foo.call(obj1)</span><br><span class="line">bar.call(obj2)</span><br></pre></td></tr></table></figure>
 
-<h1 id="Answer"><a href="#Answer" class="headerlink" title="Answer"></a>Answer</h1><p>Inside a <strong>arrow function</strong>, foo is bind to obj1 firstly. Therefor, <strong>this</strong> points to obj1. However <strong>arrow function</strong> never changes where <strong>this</strong> refer to. And <strong>this</strong> keep consistent with outer function’s no matter how obj2 binding to arrow function later. Since <strong>this</strong> is bind to arrow function at the definition (lexical scope) not run-time. </p>
-<p><strong>tips：</strong><br>lexical scope also named static scope. Scope would be determined during definition. So <strong>this</strong> would be resolved from inside to outside for arrow function.</p>
+<h1 id="Answer"><a href="#Answer" class="headerlink" title="Answer"></a>Answer</h1><p>Inside a <strong>arrow function</strong>, foo is bind to obj1 firstly. Therefor, <code>this</code> points to obj1. However <strong>arrow function</strong> never changes where this refer to. And <code>this</code> keep consistent with outer function’s no matter how obj2 binding to arrow function later. Since <code>this</code> is bind to arrow function at the definition (lexical scope) not run-time. </p>
+<p><strong>tips：</strong><br>lexical scope also named static scope. Scope would be determined during definition. So <code>this</code> would be resolved from inside to outside for arrow function.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var x=1;</span><br><span class="line">var obj=&#123;</span><br><span class="line">  x:2,</span><br><span class="line">  /**</span><br><span class="line">  looking for this. there is no this in obj, so looking outside until global(windows), so this.x =  windows.x </span><br><span class="line">  */</span><br><span class="line">  print: () =&gt; &#123; </span><br><span class="line">    console.log(this.x)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">obj.print();</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var x=1;</span><br><span class="line">var obj=&#123;</span><br><span class="line">  x:2,</span><br><span class="line">  print: function() &#123; // regular function according to &apos;context&apos;</span><br><span class="line">          console.log(this.x)</span><br><span class="line">         &#125;</span><br><span class="line">&#125;</span><br><span class="line">obj.print();</span><br></pre></td></tr></table></figure>
@@ -364,9 +364,9 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">var a = 1</span><br><span class="line">var obj = &#123;</span><br><span class="line">  a:2,</span><br><span class="line">  b:&#123;</span><br><span class="line">    a:3,</span><br><span class="line">    c: &#123;</span><br><span class="line">      a:4,</span><br><span class="line">      getA: function() &#123; // context -&gt; this = c</span><br><span class="line">                         // looking for this -&gt; c</span><br><span class="line">              return () =&gt; console.log(this.a)</span><br><span class="line">            &#125;</span><br><span class="line">   &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">obj.b.c.getA()()</span><br></pre></td></tr></table></figure>
 
 <p>#Conclusion</p>
-<p>For arrow function, we look for this according to <strong>lexical scope</strong>. For regular function, we do in terms of <strong>context</strong>.</p>
-<p>In short, who invoke regular function, <strong>this</strong> point to who. (run-time)</p>
-<p>For arrow function, looking for <strong>this</strong> from inside to outside, first this is its this scope. (during definition)</p>
+<p>For arrow function, we look for <code>this</code> according to <strong>lexical scope</strong>. For regular function, we do in terms of <code>context</code>.</p>
+<p>In short, who invoke regular function, <code>this</code> point to who. (run-time)</p>
+<p>For arrow function, looking for <code>this</code> from inside to outside, first <code>this</code> is its <code>this</code> scope. (during definition)</p>
 
       
     </div>
@@ -384,9 +384,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/this/" rel="tag"># this</a>
-          
             <a href="/tags/es6/" rel="tag"># es6</a>
+          
+            <a href="/tags/this/" rel="tag"># this</a>
           
             <a href="/tags/arrow-function/" rel="tag"># arrow function</a>
           
@@ -488,7 +488,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

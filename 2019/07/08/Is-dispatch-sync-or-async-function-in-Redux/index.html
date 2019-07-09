@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="dispatch,thunk,middleware,synchronous,asynchronous,">
+  <meta name="keywords" content="dispatch,synchronous,asynchronous,thunk,middleware,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="We apply thunk middleware in Redux for performing asynchronous dispatch. How is the excution order if dispatching bunch of synchronous/asynchronous functions(action creators)?  Below we got two action">
-<meta name="keywords" content="dispatch,thunk,middleware,synchronous,asynchronous">
+<meta name="description" content="We apply thunk middleware in Redux for performing asynchronous dispatch. How is the excution order if dispatching bunch of synchronous/asynchronous functions (action creators)?  Below we got two actio">
+<meta name="keywords" content="dispatch,synchronous,asynchronous,thunk,middleware">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Is &#39;dispatch&#39; sync or async function in Redux">
 <meta property="og:url" content="http://yoursite.com/2019/07/08/Is-dispatch-sync-or-async-function-in-Redux/index.html">
 <meta property="og:site_name" content="Cwy&#39;s Notes">
-<meta property="og:description" content="We apply thunk middleware in Redux for performing asynchronous dispatch. How is the excution order if dispatching bunch of synchronous/asynchronous functions(action creators)?  Below we got two action">
+<meta property="og:description" content="We apply thunk middleware in Redux for performing asynchronous dispatch. How is the excution order if dispatching bunch of synchronous/asynchronous functions (action creators)?  Below we got two actio">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-08T14:31:20.602Z">
+<meta property="og:updated_time" content="2019-07-09T13:08:41.621Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Is &#39;dispatch&#39; sync or async function in Redux">
-<meta name="twitter:description" content="We apply thunk middleware in Redux for performing asynchronous dispatch. How is the excution order if dispatching bunch of synchronous/asynchronous functions(action creators)?  Below we got two action">
+<meta name="twitter:description" content="We apply thunk middleware in Redux for performing asynchronous dispatch. How is the excution order if dispatching bunch of synchronous/asynchronous functions (action creators)?  Below we got two actio">
 
 
 
@@ -342,13 +342,13 @@
       
 
       
-        <div class="note default"><p>We apply <a href="https://www.npmjs.com/package/redux-thunk" target="_blank" rel="noopener"><strong>thunk</strong></a> middleware in Redux for performing asynchronous dispatch. How is the excution order if dispatching bunch of synchronous/asynchronous functions(action creators)?</p></div>
+        <div class="note default"><p>We apply <a href="https://www.npmjs.com/package/redux-thunk" target="_blank" rel="noopener"><strong>thunk</strong></a> middleware in <code>Redux</code> for performing asynchronous <code>dispatch</code>. How is the excution order if dispatching bunch of synchronous/asynchronous functions (action creators)?</p></div>
 
 <p>Below we got two action creators:<br> <a id="more"></a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">function increment(number) &#123;</span><br><span class="line"> return &#123;</span><br><span class="line">   type: &apos;INCREMENT&apos;</span><br><span class="line">   number</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function incrementAsync() &#123;</span><br><span class="line"> return async (dispatch) =&gt; &#123;</span><br><span class="line">    const number = await fetchNumber()</span><br><span class="line">    dispatch(increment(number))</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function doubleIncrement() &#123;</span><br><span class="line">  return dispatch =&gt; &#123;</span><br><span class="line">    dispatch(increment(1)) // A: console.log(dispatch(increment()))</span><br><span class="line">    dispatch(incrementAsync()) // B: console.log(dispatch(incrementAsync()))</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><strong>What would we get at location A and B?</strong><br>Answer: An <strong>object</strong>: {type: ‘INCREMENT’} and a <strong>promise</strong>.<br>Therefore whether <strong>dispatch</strong> is sync or async depends on what content is being dispached.</p>
-<p>we can maintain the order of dispatch like:</p>
+<p><strong>What would we get at location A and B?</strong><br>Answer: An <code>object</code>: {type: ‘INCREMENT’} and a <code>promise</code>.<br>That means whether <code>dispatch</code> is sync or async depends on what content is being dispached.</p>
+<p><strong>Conclusion</strong><br>we can maintain the order of <code>dispatch</code> with <code>thunk</code> middleware like:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">await dispatch(incrementAsync())</span><br><span class="line">await dispatch(incrementAsync())</span><br></pre></td></tr></table></figure>
 
 <p>Or</p>
@@ -371,13 +371,13 @@
           
             <a href="/tags/dispatch/" rel="tag"># dispatch</a>
           
-            <a href="/tags/thunk/" rel="tag"># thunk</a>
-          
-            <a href="/tags/middleware/" rel="tag"># middleware</a>
-          
             <a href="/tags/synchronous/" rel="tag"># synchronous</a>
           
             <a href="/tags/asynchronous/" rel="tag"># asynchronous</a>
+          
+            <a href="/tags/thunk/" rel="tag"># thunk</a>
+          
+            <a href="/tags/middleware/" rel="tag"># middleware</a>
           
         </div>
       
@@ -399,6 +399,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/09/How-to-prevent-focus-getting-away-from-input-textarea/" rel="prev" title="How to prevent focus getting away from input/textarea?">
+                How to prevent focus getting away from input/textarea? <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -468,7 +472,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
