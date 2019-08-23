@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="event,preventDefault,">
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
@@ -79,18 +79,13 @@
 
 
 
-<meta name="description" content="CaseSay we had a input element and button element. We expect input not to lose its focus after clicking button.  123456789101112...handleMouseDown(event) &amp;#123; event.preventDefault()&amp;#125;render() &amp;#">
-<meta name="keywords" content="event,preventDefault">
-<meta property="og:type" content="article">
-<meta property="og:title" content="How to prevent focus getting away from input&#x2F;textarea?">
-<meta property="og:url" content="http://yoursite.com/2019/07/09/How-to-prevent-focus-getting-away-from-input-textarea/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cwy&#39;s Notes">
+<meta property="og:url" content="http://yoursite.com/tags/Bash/index.html">
 <meta property="og:site_name" content="Cwy&#39;s Notes">
-<meta property="og:description" content="CaseSay we had a input element and button element. We expect input not to lose its focus after clicking button.  123456789101112...handleMouseDown(event) &amp;#123; event.preventDefault()&amp;#125;render() &amp;#">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-09T13:35:44.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="How to prevent focus getting away from input&#x2F;textarea?">
-<meta name="twitter:description" content="CaseSay we had a input element and button element. We expect input not to lose its focus after clicking button.  123456789101112...handleMouseDown(event) &amp;#123; event.preventDefault()&amp;#125;render() &amp;#">
+<meta name="twitter:title" content="Cwy&#39;s Notes">
 
 
 
@@ -120,13 +115,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/07/09/How-to-prevent-focus-getting-away-from-input-textarea/">
+  <link rel="canonical" href="http://yoursite.com/tags/Bash/">
 
 
 
 
 
-  <title>How to prevent focus getting away from input/textarea? | Cwy's Notes</title>
+  <title>Tag: Bash | Cwy's Notes</title>
   
 
 
@@ -145,7 +140,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -239,178 +234,52 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
+  
+  
+  
+  <div class="post-block tag">
 
-  
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h1>Bash<small>Tag</small>
+        </h1>
+      </div>
 
-  
-  
-  
+      
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/09/How-to-prevent-focus-getting-away-from-input-textarea/">
+    <header class="post-header">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Wenyi Chen">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avtr.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Cwy's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
+      <h2 class="post-title">
         
+            <a class="post-title-link" href="/2019/08/23/Bash-Useful-Command/" itemprop="url">
+              
+                <span itemprop="name">Bash Useful Command</span>
+              
+            </a>
         
-          <h1 class="post-title" itemprop="name headline">How to prevent focus getting away from input/textarea?</h1>
-        
+      </h2>
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-09T21:17:18+08:00">
-                2019-07-09
-              </time>
-            
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-08-23T22:20:11+08:00" content="2019-08-23">
+          08-23
+        </time>
+      </div>
 
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Javascript/" itemprop="url" rel="index">
-                    <span itemprop="name">Javascript</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p><strong>Case</strong><br>Say we had a <code>input</code> element and <code>button</code> element. We expect <code>input</code> not to lose its focus after clicking <code>button</code>.</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">handleMouseDown(event) &#123;</span><br><span class="line"> event.preventDefault()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">render() &#123;</span><br><span class="line">  return (</span><br><span class="line">    &lt;input /&gt;</span><br><span class="line">    &lt;button onMouseDown=&#123;event =&gt; this.handleMouseDown(event)&#125;&gt;&lt;/button&gt;</span><br><span class="line">  )</span><br><span class="line">...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p> We can invoke <code>preventDefault</code> when <code>mousedown</code>. Then focus will not get away from <code>input</code>.</p>
-
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/event/" rel="tag"># event</a>
-          
-            <a href="/tags/preventDefault/" rel="tag"># preventDefault</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/07/08/Is-dispatch-sync-or-async-function-in-Redux/" rel="next" title="Is 'dispatch' sync or async function in Redux">
-                <i class="fa fa-chevron-left"></i> Is 'dispatch' sync or async function in Redux
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/23/How-does-async-await-work/" rel="prev" title="How does async/await work?">
-                How does async/await work? <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
+    </header>
   </article>
 
 
-
-    <div class="post-spread">
       
     </div>
+
   </div>
+  
+  
+  
+
+  
 
 
           </div>
@@ -418,10 +287,6 @@
 
 
           
-
-  
-
-
 
         </div>
         
@@ -638,10 +503,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 
